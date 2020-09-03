@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <!-- vue的data数据可以在vue的作用范围内渲染   -->
+    {{1}}
+    <hr>
+    {{message}}
+    <hr>
+    <h2>{{ username }}</h2>
+    <hr>
+    <span>{{password}}</span>
+</div>
+
+<div id="app2">
+    {{2}}
+    {{ message }}
+</div>
+
+<!--引入vue的js 第一种方式需要联网才可使用-->
+<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+<script src="js/vue.min.js"></script>
+<script>
+    //创建一个Vue的实例
+    new Vue({
+        el:'#app',     //element对象  用来给vue定义一个作用范围
+        //用来给vue实例定义一些相关的数据 vue的默认属性
+        data:{
+            //在data中定义变量名，可以随意定义
+            message:'Hello Vue',
+            username:'百知教育',
+            password:'123456',
+        },
+    })
+</script>
+
+</body>
+</html>

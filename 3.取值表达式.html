@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app" class="aa">
+<!--    插值表达式-->
+    {{msg.toUpperCase()}}
+
+    <p>{{num/10}}</p>
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        //vue 可以使用任意选择器 只推荐使用id选择器
+        el:'.aa',
+        data:{
+            msg:'hello world',
+            num:100,
+        }
+    })
+</script>
+</body>
+</html>

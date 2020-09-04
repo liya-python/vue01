@@ -8,13 +8,13 @@
 
 <div id="app">
 
-    <h3>{{count}}</h3>
+    <span>{{count}}</span>
 
-    <input type="button" value="将count修改为指定的值" @click="change_count(88, 'tom')">
-
+    <input type="button" value="将count修改为指定的值" @click="change_count(88,'tom')">
     <p @click="click_me">点击</p>
     <p @click="click_me2()">点击2</p>
-    <p @click="click_me3(1, 'jack', event)">点击3</p>
+    <p @click="click_me3(1,'jack',event)">点击3</p>
+
 
 </div>
 
@@ -23,24 +23,26 @@
     new Vue({
         el: "#app",
         data: {
-            count: 20,
+            count:20,
         },
-        methods: {
-            change_count(number, name) {
-                console.log(name)
-                this.count = number;
+        methods:{
+            change_count(number,name){
+                // console.log(number);
+                console.log(name);
+                this.count=number
             },
             click_me(){
-                console.log(event)
+                console.log(event);
             },
             click_me2(event){
                 console.log(event);
             },
-            click_me3(a, b, event){
-                console.log(a, b);
+            click_me3(a,b,event){
+                console.log(a,b);
                 console.log(event);
             }
         }
+
     })
 </script>
 

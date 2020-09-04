@@ -8,13 +8,10 @@
 
 <div id="app">
 
-
     <h3>{{age}}</h3>
-
     <input type="button" value="点击v-on绑定的事件每次年龄+1" v-on:click="change_age">
-    <!-- v-on:事件可简化为 @事件名 两者作用完全一样   -->
+    <!--  v-on:事件可简化为 @事件名 两者完全一样 -->
     <input type="button" value="点击@修饰事件每次年龄-1" @click="edit_age">
-
 </div>
 
 <script src="js/vue.min.js"></script>
@@ -22,18 +19,18 @@
     new Vue({
         el: "#app",
         data: {
-            age: 14,
+            age:14
         },
-        methods: {
-            // 点击年龄+1
-            change_age: function () {
+        methods:{
+            //点击年龄+1
+            change_age:function () {
                 this.age++;
             },
-            // 点击年龄-1
-            edit_age: function () {
+            //点击年龄-1
+            edit_age:function () {
                 this.age--;
             }
-        },
+        }
     })
 </script>
 

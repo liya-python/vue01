@@ -8,14 +8,11 @@
 
 <div id="app">
 
-    <!-- 用来控制标签是否展示  true|false   -->
+    <!--   用来控制标签是否展示 true false-->
     <h3 v-show="false">{{message}}</h3>
-    <h3 v-show="isShow">我十分喜欢以及热爱Vue</h3>
-
+    <h3 v-show="isShow">我十分喜欢以及热爱vue</h3>
     <input type="button" value="控制标签显示隐藏" @click="showMsg">
-
     <hr>
-
     <h2 v-show="count>=20">百知教育</h2>
     <input type="button" @click="changeCount" value="点击">
 
@@ -26,18 +23,19 @@
     new Vue({
         el: "#app",
         data: {
-            message: "上课一定好好听讲！",
-            isShow: true,
-            count: 23,
+            message:'上课一定要好好听讲',
+            isShow:true,
+            count:23,
         },
-        methods: {
-            showMsg() {
+        methods:{
+            showMsg(){
                 this.isShow = !this.isShow;
             },
             changeCount(){
                 this.count--;
-            },
+            }
         }
+
     })
 </script>
 

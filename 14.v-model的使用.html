@@ -11,6 +11,7 @@
     <!-- v-model只能在表单控件中使用   -->
     <input type="text" v-model="message">
     <hr>
+
     <p>{{message}}</p>
 
 <!--    <input type="button" value="改变message的值" @click="changeValue">-->
@@ -22,13 +23,14 @@
     new Vue({
         el: "#app",
         data: {
-            message: "",
+           message:'',
         },
         methods:{
             changeValue(){
-                this.message = "百知教育"
-            },
+                this.message = '百知教育'
+            }
         }
+
     })
 </script>
 

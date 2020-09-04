@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .aa {
+        .aa{
             border: 2px red solid;
         }
     </style>
@@ -13,18 +13,17 @@
 
 <div id="app">
 
-    <!--    <img alt="" title="帅气的二哈" class="aa"-->
-    <!--         src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1599118332&di=61059fac8c10f506524ce0b87eb1c259&src=http://n.sinaimg.cn/sinacn08/40/w480h360/20181201/9363-hpevhcm5874484.jpg" >-->
+    <!--    <img alt="" title="猫咪" class="aa"-->
+    <!-- src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2023795161,2247378725&fm=26&gp=0.jpg">-->
 
-    <!--  可以通过v-bind绑定vue中的属性 v-bind绑定的属性的值要在vue实例中的data里定义好  -->
-<!--    <img v-bind:src="src" alt="" v-bind:title="title" v-bind:class="{aa: showCss}">-->
+    <!--    可以通过v-bind绑定vue中的属性 v-bind绑定的属性的值要在vue实例中的data里定义好-->
+<!--    <img  v-bind:src="src" alt="" v-bind:title="title" v-bind:class="{aa:showCss}">-->
 
-    <!-- v-bind简化写法   -->
-    <img :src="src" alt="" :title="title" :class="{aa: showCss}">
+    <!--    v-bind的简化写法-->
+    <img :src="src" alt="" :title="title" :class="{aa:showCss}">
 
     <input type="button" value="动态加入图片样式" @click="addCss">
     <input type="button" value="切换图片" @click="changeImg">
-
 
 </div>
 
@@ -33,20 +32,22 @@
     new Vue({
         el: "#app",
         data: {
-            title: "二哈",
-            showCss: true,
-            src: "https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=195734936,2926387328&fm=26&gp=0.jpg"
+            title:'猫咪',
+            showCss:true,
+            src:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599235790092&di=f260337af9a4923e033c6801dd9539e7&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201612%2F16%2F20161216175142_YSXPw.thumb.700_0.jpeg'
+
         },
         methods:{
-            // 改变图片样式
+            //改变图片样式
             addCss(){
                 this.showCss = !this.showCss;
             },
-            // 切换图片
+            //切换图片
             changeImg(){
-                this.src = "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3291638106,1894579552&fm=26&gp=0.jpg"
-            },
+                this.src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599236510174&di=f8682edb2221f422e03c82ef5e17e2e6&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F86d886a688fe9d405747e67e075f08746ae9bb146c11-qVQTMg_fw658'
+            }
         }
+
     })
 </script>
 
